@@ -22,12 +22,12 @@ install_with_brew () {
     local foudation="ghostty, tmux, neovim, gh, act, opentofu, terragrunt,
     tfenv, colima, k9s, kind, argocd"
     for k in $foudation; do
-    if brew info --cask "$k" &>/dev/null; then
-        brew install --cask $k
-    elif brew info "$k" &>/dev/null; then
-        brew install $k
-    else
-        echo "package doesn't exists"
+        if brew info --cask "$k" &>/dev/null; then
+            brew install --cask $k
+        elif brew info "$k" &>/dev/null; then
+            brew install $k
+        else
+            echo "package doesn't exists"
     done
 }
 
