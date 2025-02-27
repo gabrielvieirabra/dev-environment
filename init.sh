@@ -28,6 +28,7 @@ install_with_brew () {
             brew install $k
         else
             echo "package doesn't exists"
+        fi
     done
 }
 
@@ -46,6 +47,6 @@ install_with_webi(){
     done
 }
 
-install_with_webi()
-install_with_brew()
-setup_zsh()
+install_with_webi
+#install_with_brew()
+#setup_zsh()
